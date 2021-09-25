@@ -1,0 +1,13 @@
+﻿@page
+@model ToDoWebApp.Pages.TodoItemModel
+@using ToDoWebApp
+@{
+}
+
+
+<ol>
+    @foreach (KeyValuePair<string, TodoItem> item in Model.TodoList)
+    {
+       <li>@item.Value.Name @item.Value.IsComplete</li>
+    }
+</ol>
