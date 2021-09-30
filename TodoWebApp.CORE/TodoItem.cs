@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-namespace ToDoWebApp
+namespace TodoWebApp.CORE
 {
     public class TodoItem
     {
+        [Key]
+        public int TodoID { get; set; }
         public string Name { get; set; }
         public bool IsComplete { get; set; }
     }
