@@ -1,11 +1,16 @@
 ﻿@page
 @model ToDoWebApp.Pages.TodoItemModel
 @using ToDoWebApp
- 
+@using TodoWebApp.CORE;
+
 @{
 }
 
 
 <ol>
+    @foreach (TodoItem i in this.Model.todoList)
+            {
+                <li>@i.Name</li>
+            }
 
 </ol>
