@@ -24,7 +24,7 @@ namespace TodoWebApp.DAL
         }
         protected override void OnConfiguring(DbContextOptionsBuilder dbcontextbuilder)
         {
-            dbcontextbuilder.UseNpgsql("Host=localhost;Username=postgres;Password=postgres;Database=FullApp");
+            dbcontextbuilder.UseNpgsql("Host=localhost;Username=postgres;Password=new_password;Database=Todo");
         }
     }
 

@@ -7,10 +7,9 @@
 }
 
 
-<ol>
+<ol>    
     @foreach (TodoItem i in this.Model.todoList)
             {
-                <li>@i.Name</li>
+                <li><a href="/TodoItemDetails/@i.TodoID">@i.Name</a> @i.IsComplete</li>                
             }
-
 </ol>

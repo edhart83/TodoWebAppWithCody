@@ -29,7 +29,11 @@ namespace ToDoWebApp
 
               });
             services.AddDbContext<TodoWebAppDbContext>(options =>
-                   options.UseNpgsql(Configuration.GetConnectionString("connection")));
+            {
+                string con = Configuration.GetConnectionString("connection");
+                Console.WriteLine(con);
+                options.UseNpgsql();
+            });
             services.AddScoped<ITodoService,TodoService>();
         }
 

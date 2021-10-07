@@ -1,9 +1,10 @@
 ﻿@page
 @model ToDoWebApp.Pages.AddTodoItemModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
 }
 <form method="post">
-    <input type="text" class="form-control" name="TodoItems.Name">
-    <input type="checkbox" class="form-control" name="TodoItems.IsComplete">
+    <input asp-for="@this.Model.TodoItems.Name">
+    <input asp-for="@this.Model.TodoItems.IsComplete">
     <input type="submit" />
 </form>

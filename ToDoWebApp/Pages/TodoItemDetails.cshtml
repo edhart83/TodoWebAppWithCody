@@ -1,0 +1,13 @@
+﻿@page "{id}"
+@model ToDoWebApp.Pages.TodoItemDetailsModel
+@{
+}
+<div>
+    @this.Model.theTodoItem.Name
+</div>
+<div>
+    @this.Model.theTodoItem.IsComplete
+</div>
+<form method="post" asp-page="/TodoItemDetails" asp-route-id="@this.Model.theTodoItem.TodoID">
+    <button>Mark Complete</button>
+</form>
