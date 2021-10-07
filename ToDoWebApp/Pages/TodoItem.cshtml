@@ -1,5 +1,6 @@
 ﻿@page
 @model ToDoWebApp.Pages.TodoItemModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using ToDoWebApp
 @using TodoWebApp.CORE;
 
@@ -13,3 +14,6 @@
                 <li><a href="/TodoItemDetails/@i.TodoID">@i.Name</a> @i.IsComplete</li>                
             }
 </ol>
+<div>
+    <a asp-page="/AddTodoItem">Add a TodoItem</a>
+</div>

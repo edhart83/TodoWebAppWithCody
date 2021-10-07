@@ -28,6 +28,8 @@ namespace ToDoWebApp
                          .ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
 
               });
+            services.AddControllers();
+            services.AddSwaggerGen();            
             services.AddDbContext<TodoWebAppDbContext>(options =>
             {
                 string con = Configuration.GetConnectionString("connection");
@@ -43,8 +45,10 @@ namespace ToDoWebApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
-
+           
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -52,6 +56,7 @@ namespace ToDoWebApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

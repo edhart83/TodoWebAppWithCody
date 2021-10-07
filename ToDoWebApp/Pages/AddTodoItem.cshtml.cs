@@ -26,7 +26,6 @@ namespace ToDoWebApp.Pages
 
         public IActionResult OnPost()
         {
-
             if (this.ModelState.IsValid)
             {
                 theTodoService.AddTodoItem(TodoItems);
